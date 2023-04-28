@@ -16,12 +16,12 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of the 6 major primitive types available in C++  here:
  
- 
- 
- 
- 
- 
- 
+ integer
+ float
+ character
+ boolean
+ double
+ unsigned integer
  
  
  
@@ -65,9 +65,29 @@ void variableDeclarations()
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
     
-
+    int life = 0;
+    int myPower = 9;
+    int endOfRainbowLocation = 3;
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    float hate = 66.f;
+    float airQuality = 1.f;
+    float hairThickness = 12.f;
+    
+    double blue = 0.21;
+    double speed = 51.6;
+    double drumTuning = 84.2;
+
+    char Z = 'Z';
+    char D = 'D';
+    char H = 'H';
+    
+    bool hasTail = true;
+    bool isMale = false;
+    bool isExpensive = true;
+
+    ignoreUnused(number, life, myPower, endOfRainbowLocation, hate, airQuality, hairThickness, blue, speed, drumTuning, Z, D, H, hasTail, isMale, isExpensive);
+    
+    //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -82,45 +102,85 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 } 
 
 /*
- 1)
+ 1) 
  */
-
+bool playAShow(int playDuration = 2, int showGenre = 4)
+{
+    ignoreUnused(playDuration, showGenre);
+    return {};
+}
 /*
  2)
  */
-
+double getDressed(bool shirt = true, int pants = 7, int shoes = 11)
+{
+    ignoreUnused(shirt, pants, shoes);
+    return {};
+}
 /*
  3)
  */
-
+float celebrateHalloween(int halloweenCostume = 42, bool celabratoryCandy = true, int drinkChoice = 33, double spiritLevel = 56.1)
+{
+    ignoreUnused(halloweenCostume, celabratoryCandy, drinkChoice, spiritLevel);
+    return {};
+}
 /*
  4)
  */
-
+bool goShopping(int numItemsBought = 3, float shoppingDuration = 11.f)
+{
+    ignoreUnused(numItemsBought, shoppingDuration);
+    return {};
+}
 /*
  5)
  */
-
+bool prepareCoffee(int numScoops = 3, double steepDuration = 6.84)
+{
+    ignoreUnused(numScoops, steepDuration);
+    return {};
+}
 /*
  6)
  */
-
+int paintPicture(int numColors = 7, int subject = 5)
+{
+    ignoreUnused(numColors, subject);
+    return {};
+}
 /*
  7)
  */
-
+bool doMeditation(int numBreaths = 99)
+{
+    ignoreUnused(numBreaths);
+    return {};
+}
 /*
  8)
  */
-
+float goFishing(int baitType = 4, float castLocation = 13.2f, int castDuration = 5)
+{
+    ignoreUnused(baitType, castLocation, castDuration);
+    return {};
+}
 /*
  9)
  */
-
+bool watchTv(int channel = 20, double duration = 3.51)
+{
+    ignoreUnused(channel, duration);
+    return {};
+}
 /*
  10)
  */
-
+double smellFlower(int flowerType = 1, float breathDuration = 10.f)
+{
+    ignoreUnused(flowerType, breathDuration);
+    return {};
+}
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
@@ -139,29 +199,28 @@ int main()
 {
     //example of calling that function, storing the value, and passing it to ignoreUnused at the end of main()
     auto carRented = rentACar(6, 2); 
-    
-    //1)
-    
+    //1) 
+    auto showPlayed = playAShow(2, 4);
     //2)
-    
+    auto gotDressed = getDressed(true, 7, 11);
     //3)
-    
+    auto halloweenCelebrated = celebrateHalloween(42, true, 33, 56.1);
     //4)
-    
+    auto shoppingDone = goShopping(3, 11.f);
     //5)
-    
+    auto coffeePrepared = prepareCoffee(3, 6.84);
     //6)
-    
+    auto picturePainted = paintPicture(7, 5);
     //7)
-    
+    auto meditationDone = doMeditation(99);
     //8)
-    
+    auto fishingDone = goFishing(4, 13.2f, 5);
     //9)
-    
+    auto tvWatched = watchTv(20, 3.51); 
     //10)
+    auto flowerSmelled = smellFlower(1, 10.f);
     
-    
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, showPlayed, gotDressed, halloweenCelebrated, shoppingDone, coffeePrepared, picturePainted, meditationDone, fishingDone, tvWatched, flowerSmelled);
     std::cout << "good to go!" << std::endl;
-    return 0;    
+    return 0;        
 }
