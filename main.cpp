@@ -85,9 +85,9 @@ void variableDeclarations()
     bool isMale = false;
     bool isExpensive = true;
 
-    ignoreUnused(life, myPower, endOfRainbowLocation, hate, airQuality, hairThickness, blue, speed, drumTuning, Z, D, H, hasTail, isMale, isExpensive);
+    ignoreUnused(number, life, myPower, endOfRainbowLocation, hate, airQuality, hairThickness, blue, speed, drumTuning, Z, D, H, hasTail, isMale, isExpensive);
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    //passing each variable declared to the ignoreUnused() function
 }
 
 /*
